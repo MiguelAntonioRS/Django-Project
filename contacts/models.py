@@ -2,8 +2,10 @@ from django.db import models
 
 class Contact(models.Model):
     
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, verbose_name='Nombre')
     email = models.EmailField(max_length=50)
-    birth_date = models.DateField(null=True, blank=True)
-    phone = models.CharField(max_length=8, null=True, blank=True)
-    created = models.DateTimeField(auto_now_add=True)
+    birth_date = models.DateField(null=True, blank=True, verbose_name='Fecha de Nacimiento')
+    phone = models.CharField(max_length=8, null=True, blank=True, verbose_name='Numero de telefono')
+    created = models.DateTimeField(auto_now_add=True) 
+    
+    
