@@ -39,7 +39,10 @@
             <tbody>
                 {% for contact in object_list %}
                 <tr>
-                    <td>{{contact.name}}</td>
+                    <td>
+                        <div class="fw-bold">{{contact.name}}</div>
+                        <div>{{contact.email}}</div>
+                    </td>
                     <td>{{contact.birth_date|default:'-'}}</td>
                     <td>{{contact.phone|default:'-'}}</td>
                     <td>{{contact.created|date:'d/m/Y h:i A'}}</td>
