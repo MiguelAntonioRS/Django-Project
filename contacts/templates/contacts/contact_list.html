@@ -37,13 +37,15 @@
                 </tr>
             </thead>
             <tbody>
+                {% for contact in object_list %}
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.birth_date}}</td>
+                    <td>{{contact.phone}}</td>
+                    <td>{{contact.created}}</td>
                     <td></td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>
