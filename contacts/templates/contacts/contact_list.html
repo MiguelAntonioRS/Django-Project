@@ -40,8 +40,8 @@
                 {% for contact in object_list %}
                 <tr>
                     <td>{{contact.name}}</td>
-                    <td>{{contact.birth_date}}</td>
-                    <td>{{contact.phone}}</td>
+                    <td>{{contact.birth_date|default:'-'}}</td>
+                    <td>{{contact.phone|default:'-'}}</td>
                     <td>{{contact.created}}</td>
                     <td></td>
                 </tr>
