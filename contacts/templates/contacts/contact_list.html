@@ -42,8 +42,13 @@
                     <td>{{contact.name}}</td>
                     <td>{{contact.birth_date|default:'-'}}</td>
                     <td>{{contact.phone|default:'-'}}</td>
-                    <td>{{contact.created}}</td>
-                    <td></td>
+                    <td>{{contact.created|date:'d/m/Y h:i A'}}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            <a href="" class="btn btn-primary">Editar</a>
+                            <a href="" class="btn btn-danger">Eliminar</a>
+                        </div>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
