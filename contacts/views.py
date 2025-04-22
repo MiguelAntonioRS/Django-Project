@@ -4,3 +4,6 @@ from contacts.models import Contact
 
 class ContactListView(generic.ListView):
     model = Contact
+    
+class ContactCreateView(generic.CreateView):
+    model = Contact
