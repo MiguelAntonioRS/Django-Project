@@ -7,3 +7,4 @@ class ContactListView(generic.ListView):
     
 class ContactCreateView(generic.CreateView):
     model = Contact
+    fields = ('name', 'email', 'birth_date', 'phone')
