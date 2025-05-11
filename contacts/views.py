@@ -9,6 +9,7 @@ class ContactListView(generic.ListView):
 class ContactCreateView(generic.CreateView):
     model = Contact
     fields = ('name', 'email', 'birth_date', 'phone')
+    success_url = reverse_lazy('contact_list')
     
 class ContactUpdateView(generic.UpdateView):
     model = Contact
