@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Virtual</title>
+
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+</head>
+<body class="container py-5">
+
+    <div class="p-5 border border-1 shadow">
+        <h1 class="fw-bold text-primary">Bienvenido a mi Agenda</h1>
+        <h2>Con esta aplicacion podras gestionar tu Agenda Virtual!</h2>
+        <p>Consulta, crea, actualiza y elimina tus contactos de forma rapida y segura</p>
+    </div>
+
+    <div class="mt-5">
+        <h3>Nuevo Contacto</h3>
+
+        <div class="text-end">
+            <a href="{% url 'contact_new' %}" class="btn btn-outline-primary">
+                Registrar Contacto
+            </a>
+        </div>
+
+        <table class="mt-5 table table-hover">
+            <thead>
+                <tr>
+                    <th>Nombres</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Celular</th>
+                    <th>Fecha de Registro</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contact in object_list %}
+                <tr>
+                    <td>
+                        <div class="fw-bold">{{contact.name}}</div>
+                        <div>{{contact.email}}</div>
+                    </td>
+                    <td>{{contact.birth_date|default:'-'}}</td>
+                    <td>{{contact.phone|default:'-'}}</td>
+                    <td>{{contact.created|date:'d/m/Y h:i A'}}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            <a href="{% url 'contact_edit' contact.pk %}" class="btn btn-primary">Editar</a>
+                            <a href="" class="btn btn-danger">Eliminar</a>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+</html> 
