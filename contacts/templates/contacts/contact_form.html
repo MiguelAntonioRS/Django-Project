@@ -21,7 +21,7 @@
         <h3>{% if contact %}
             Editar
             {% else %}
-            Crear
+            Nuevo
             {% endif %}
             Contacto</h3>
     </div>
@@ -33,7 +33,12 @@
         <div class="text-end mt-3">
         
             <button class="btn btn-primary">
-                Crear Contacto
+                {% if contact %}
+                Editar
+                {% else %}
+                Crear
+                {% endif %}
+                Contacto
             </button>
             
             <a href="{% url 'contact_list' %}" class="btn btn-light me-1">
