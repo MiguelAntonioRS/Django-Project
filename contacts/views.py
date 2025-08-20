@@ -15,3 +15,7 @@ class ContactUpdateView(generic.UpdateView):
     model = Contact
     fields = ('name', 'email', 'birth_date', 'phone')
     success_url = reverse_lazy('contact_list') 
+    
+class ContactDeleteView(generic.DeleteView):
+    model = Contact
+    success_url = reverse_lazy('contact_list') 
