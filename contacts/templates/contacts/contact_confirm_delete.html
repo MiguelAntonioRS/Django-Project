@@ -25,6 +25,8 @@
         Estas seguro de Eliminar el Contacto <span class="fw-bold">{{ contact.email }}</span>?
 
         <form method="post" class="mt-3">
+            {% csrf_token %}
+
             <button class="btn btn-danger">
                 Si, Eliminar
             </button>
