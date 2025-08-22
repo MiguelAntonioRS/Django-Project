@@ -21,23 +21,18 @@
         <h3>Eliminar Contacto</h3>
     </div>
 
-    <div class="alert alert-danger mt-5 text-center">
+    <div class="alert alert-danger mt-5 text-center mx-auto" style="max-width: 320px;">
         Estas seguro de Eliminar el Contacto <span class="fw-bold">{{ contact.email }}</span>?
 
-        <div>
-            <button class="btn btn-primary">
-                {% if contact %}
-                Actualizar
-                {% else %}
-                Crear
-                {% endif %}
-                Contacto
+        <form method="post" class="mt-3">
+            <button class="btn btn-danger">
+                Si, Eliminar
             </button>
             
             <a href="{% url 'contact_list' %}" class="btn btn-light me-1">
                 Cancelar
             </a>
-        </div>
+        </form>
     </div>
 
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
