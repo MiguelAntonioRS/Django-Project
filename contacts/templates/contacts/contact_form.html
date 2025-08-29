@@ -26,7 +26,7 @@
             Contacto</h3>
     </div>
 
-    <form style="max-width: 200px;" class="mt-5 mx-auto" action="" method="post">
+    <form style="max-width: 200px;" class="mt-5 mx-auto" action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
 
