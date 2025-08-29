@@ -40,6 +40,9 @@
                 {% for contact in object_list %}
                 <tr>
                     <td>
+                        {% if contact.avatar %}
+                        <img src="{{ contact.avatar.url }}" alt="">
+                        {% endif %}
                         <div class="fw-bold">{{contact.name}}</div>
                         <div>{{contact.email}}</div>
                     </td>
