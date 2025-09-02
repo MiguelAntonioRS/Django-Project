@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'contacts',
     'imagekit',
-    'crispy_form',
+    'crispy_forms',
     'crispy_bootstrap5'
 ]
 
