@@ -1,4 +1,4 @@
-{% load static %}
+{% load static crispy_forms_tags %}
 
 <!DOCTYPE html>
 <html lang="es">
@@ -28,7 +28,7 @@
 
     <form style="max-width: 200px;" class="mt-5 mx-auto" action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form|crispy }}
 
         <div class="text-end mt-3">
         
