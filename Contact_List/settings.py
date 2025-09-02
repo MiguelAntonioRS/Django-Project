@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'contacts',
     'imagekit',
     'crispy_form',
+    'crispy_bootstrap5'
 ]
 
 MIDDLEWARE = [
