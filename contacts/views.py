@@ -5,6 +5,7 @@ from contacts.models import Contact
 
 class ContactListView(generic.ListView):
     model = Contact
+    paginate_by = 5
     
 class ContactCreateView(generic.CreateView):
     model = Contact
