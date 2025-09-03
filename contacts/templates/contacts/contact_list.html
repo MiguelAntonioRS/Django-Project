@@ -86,7 +86,41 @@
                         </a>
                     </li>
                 {% else %}
-                    <li class="page-item disable"></li>    
+                    <li class="page-item disable">
+                        <a href="#" class="page-link" aria-label="Anterior">
+                            <span aria-hidden="true">
+                                <<
+                            </span>
+                        </a>
+                    </li>
+                {% endif %}
+                
+                {% for page in page_obj.adjuste_elided_pages %}
+                    <li class="page-item {% if page_obj.number == page %}active{% endif %}">
+                        <a class="page-link" href="{% url 'contact_list' %}?page={{ page }}">
+                            {{ page }}
+                        </a>
+                    </li>
+                {% endfor %}
+                
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="{% url 'contact_list' %}?page={{ page_obj.next_page_number }}"
+                        aria-label="Siguiente">
+                            <span aria-hidden="true">
+                                >>
+                            </span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Siguiente">
+                            <span aria-hidden="true">
+                                >>
+                            </span>
+                        </a>
+                    </li>   
+                {% endif %}     
             </ul>
         </nav>
     </div>
