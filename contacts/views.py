@@ -9,8 +9,10 @@ class ContactListView(generic.ListView):
     paginate_by = 5
     
     def get_queryset(self) -> QuerySet[any]:
-        if self.request.GET.get('s'):
-            return Contact.objects.filter()
+        s = self.request.GET.get('s')
+        
+        if s:
+            return Contact.objects.filter(name__icontains=s)
         
         return super().get_queryset()
     
