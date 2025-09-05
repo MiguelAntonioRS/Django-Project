@@ -2,10 +2,17 @@ from django.shortcuts import render
 from django.views import generic
 from django.urls import reverse_lazy
 from contacts.models import Contact
+from django.db.models import QuerySet
 
 class ContactListView(generic.ListView):
     model = Contact
     paginate_by = 5
+    
+    def get_queryset(self) -> QuerySet[any]:
+        if self.request.GET.get('s'):
+            return Contact.objects.filter()
+        
+        return super().get_queryset()
     
 class ContactCreateView(generic.CreateView):
     model = Contact
