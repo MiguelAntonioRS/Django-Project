@@ -35,11 +35,11 @@ Django-Project/
    cd Django-Project
 
 2. **Create and activate a virtual environment**
- ```bash
- python -m venv venv
- source venv/bin/activate   # On Linux/Mac
- venv\Scripts\activate      # On Windows
-```
+  ```bash
+  python -m venv venv
+  source venv/bin/activate   # On Linux/Mac
+  venv\Scripts\activate      # On Windows
+ ```
  3. **Install dependencies**
     pip install -r requirements.txt
 
@@ -51,3 +51,10 @@ Django-Project/
 
 6. **Open your browser and go to:**
    http://127.0.0.1:8000/
+
+## 📌 Features
+
+- Django project boilerplate  
+- Organized structure for scalability  
+- Static and media file management  
+- Easy setup for development  
