@@ -34,4 +34,8 @@ Django-Project/
    git clone https://github.com/MiguelAntonioRS/Django-Project.git
    cd Django-Project
 
-  2. 
+2. **Create and activate a virtual environment**
+ ```bash
+ python -m venv venv
+ source venv/bin/activate   # On Linux/Mac
+ venv\Scripts\activate      # On Windows
