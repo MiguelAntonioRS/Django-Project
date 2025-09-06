@@ -23,3 +23,15 @@ Django-Project/
 │── db.sqlite3 # Local database (ignored in production)
 │── manage.py # Django management script
 │── requirements.txt # Project dependencies
+
+
+---
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/MiguelAntonioRS/Django-Project.git
+   cd Django-Project
+
+  2. 
