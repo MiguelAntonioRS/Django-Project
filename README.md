@@ -9,7 +9,7 @@ It includes an initial configuration, organized structure, and examples to quick
 - [Python 3.x](https://www.python.org/)
 - [Django 4.x](https://www.djangoproject.com/)
 - SQLite3 (default database)
-- HTML, CSS, JavaScript
+- HTML, CSS, JavaScript 
  
 ---
  
