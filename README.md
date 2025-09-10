@@ -12,7 +12,7 @@ It includes an initial configuration, organized structure, and examples to quick
 - HTML, CSS, JavaScript
 
 ---
-
+ 
 ## 📂 Project Structure
  
 Django-Project/
