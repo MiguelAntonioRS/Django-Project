@@ -19,7 +19,7 @@ Django-Project/
 │── app/ # Main Django application
 │── mediaFiles/ # User-uploaded files
 │── static/ # Static files (CSS, JS, images)
-│── templates/ # HTML templates
+│── templates/ # HTML templates 
 │── db.sqlite3 # Local database (ignored in production)
 │── manage.py # Django management script
 │── requirements.txt # Project dependencies
