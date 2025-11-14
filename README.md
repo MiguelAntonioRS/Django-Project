@@ -10,7 +10,7 @@ It includes an initial configuration, organized structure, and examples to quick
 - [Django 4.x](https://www.djangoproject.com/)
 - SQLite3 (default database)
 - HTML, CSS, JavaScript
- 
+
 ---
 
 ## 📂 Project Structure
